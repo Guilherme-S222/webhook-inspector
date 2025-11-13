@@ -15,7 +15,7 @@ export const deleteWebhook: FastifyPluginAsyncZod = async(app) => {
           id: z.uuidv7(),
         }),
         response: {
-          204: z.void,
+          204: z.void(),
           404: z.object({ message: z.string() }),
         },
       },
